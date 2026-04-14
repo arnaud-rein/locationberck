@@ -1,0 +1,334 @@
+﻿:root {
+  --berck-ocean: #0ea5e9;
+  --berck-deep: #0f172a;
+  --berck-sand: #f5f5dc;
+  --berck-white: #ffffff;
+}
+
+.berck-site {
+  color: #0f172a;
+}
+
+.berck-site .container {
+  width: min(1180px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+.berck-hero {
+  position: relative;
+  min-height: 78vh;
+  overflow: hidden;
+}
+
+.berck-hero > img {
+  width: 100%;
+  height: 78vh;
+  object-fit: cover;
+}
+
+.berck-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(12, 74, 110, 0.84), rgba(14, 165, 233, 0.34));
+}
+
+.berck-hero-content {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  align-content: center;
+  color: #fff;
+}
+
+.berck-chip {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 999px;
+}
+
+.berck-hero h1 {
+  max-width: 780px;
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.berck-hero p {
+  max-width: 560px;
+  font-size: 1.05rem;
+}
+
+.berck-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+.berck-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.72rem 1.15rem;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.berck-btn-light {
+  background: #fff;
+  color: #0369a1;
+}
+
+.berck-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+}
+
+.berck-btn-dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+.berck-btn-dark:hover {
+  background: #1e293b;
+}
+
+.berck-section {
+  padding: 4.5rem 0;
+}
+
+.berck-sand {
+  background: var(--berck-sand);
+}
+
+.berck-dark {
+  background: #0f172a;
+  color: #fff;
+}
+
+.berck-section-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.berck-section-head.berck-left {
+  text-align: left;
+}
+
+.berck-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--berck-ocean);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.berck-cards,
+.berck-pricing-grid,
+.berck-reviews {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.berck-cards {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.berck-card {
+  background: #fff;
+  border-radius: 1.4rem;
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(14, 116, 144, 0.12);
+}
+
+.berck-card > img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.berck-card-body {
+  padding: 1.2rem;
+}
+
+.berck-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.berck-tags span {
+  background: #e0f2fe;
+  color: #075985;
+  border-radius: 999px;
+  padding: 0.28rem 0.62rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.berck-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin: 1rem 0;
+}
+
+.berck-details dt {
+  color: #64748b;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.berck-details dd {
+  margin: 0;
+}
+
+.berck-slider {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  height: 480px;
+}
+
+.berck-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.berck-slide.is-active {
+  opacity: 1;
+}
+
+.berck-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.berck-nav.prev { left: 0.8rem; }
+.berck-nav.next { right: 0.8rem; }
+
+.berck-pricing-grid {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.berck-unavailable-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.berck-unavailable-list span {
+  background: #ffe4e6;
+  color: #be123c;
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-weight: 700;
+  font-size: 0.84rem;
+}
+
+.berck-pricing-card {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.berck-discount {
+  margin-top: 0.7rem;
+  padding: 0.5rem;
+  border-radius: 0.6rem;
+  color: #ecfccb;
+  background: rgba(132, 204, 22, 0.25);
+}
+
+.berck-reviews {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.berck-review {
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  background: #fff;
+}
+
+.berck-stars {
+  color: #f59e0b;
+  margin: 0 0 0.4rem;
+}
+
+.berck-location-grid,
+.berck-booking-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.berck-location-card,
+.berck-contact-box,
+.berck-form-wrap {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-top: 0.8rem;
+}
+
+.berck-location-grid iframe {
+  border: 0;
+  border-radius: 1rem;
+  min-height: 420px;
+  width: 100%;
+}
+
+.berck-whatsapp {
+  margin-top: 0.5rem;
+  background: #22c55e;
+  color: #fff;
+}
+
+.berck-fallback-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.berck-fallback-form label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.berck-fallback-form input {
+  width: 100%;
+  margin-top: 0.3rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.6rem;
+  padding: 0.6rem;
+}
+
+@media (min-width: 880px) {
+  .berck-location-grid,
+  .berck-booking-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
