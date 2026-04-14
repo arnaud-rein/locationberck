@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ocean: #0ea5e9;
+  --sand: #f5f5dc;
+  --ink: #0f172a;
+  --mist: #f0f9ff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: var(--ink);
+  background: linear-gradient(180deg, #f8fdff 0%, #ffffff 40%, #fffdf7 100%);
+}
+
+::selection {
+  background: #7dd3fc;
+  color: #082f49;
+}
+
+.pattern-bg {
+  background-size: 16px 16px;
+}
